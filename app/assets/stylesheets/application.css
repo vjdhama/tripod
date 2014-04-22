@@ -15,6 +15,11 @@ body{
  	padding-top: 40px;
 	font-family: 'Roboto', 'sans-serif';
 }
+
 .navbar{
 	font-family: 'Raleway','sans-serif';
+}
+
+.navbar a {
+	color: #428BCA;
 }
