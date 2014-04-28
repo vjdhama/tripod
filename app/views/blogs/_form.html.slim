@@ -1,18 +1,21 @@
-= form_for @blog do |f|
-  - if @blog.errors.any?
-    #error_explanation
-      h2 = "#{pluralize(@blog.errors.count, "error")} prohibited this blog from being saved:"
-      ul
-        - @blog.errors.full_messages.each do |message|
-          li = message
+= form_for (@blog), html: {class: "form-horizontal"} do |f|
+    .col-sm-6
+        .form-group
+            label.control-label.col-sm-4 for= 'title'
+                |User_Id
+            .col-sm-8
+                = f.text_field :user_id
+        .form-group
+            label.control-label.col-sm-4 for= 'title'
+                |Title
+            .col-sm-8
+                = f.text_field :title
+            label#form-offer-on-error.label.label-danger
+        .form-group
+            label.control-label.col-sm-4 for= 'content'
+                |Content
+            .col-sm-8
+                = f.text_field :content
+            label#form-offer-on-error.label.label-danger
 
-  .field
-    = f.label :name
-    = f.text_field :name
-  .field
-    = f.label :title
-    = f.text_field :title
-  .field
-    = f.label :content
-    = f.text_area :content
-  .actions = f.submit 'Save'
+        button.btn.btn-success.btn-lg.icon-ok  type = "submit"  Submit

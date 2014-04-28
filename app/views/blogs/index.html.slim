@@ -5,11 +5,12 @@
 - @blogs.each do |blog|
     .blog
         strong
+            = blog.user.first_name 
+        br
+        strong
             = blog.title
         .content
             = blog.content
-        p.label.label-primary
-            = blog.name
         .meta
             = link_to time_ago_in_words(blog.created_at) + " ago", blog
             |  
