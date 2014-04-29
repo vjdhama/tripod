@@ -1,15 +1,12 @@
-p#notice = notice
-
-P
-  strong Name:
-  = @blog.user.first_name
-p
-  strong Title:
-  = @blog.title
-p
-  strong Content:
-  = @blog.content
-
-= link_to 'Edit', edit_blog_path(@blog)
-'|
-= link_to 'Back', root_path
+.page-header.well#show
+	blockquote
+		h3
+			= @blog.title.capitalize
+	p
+		= @blog.content
+	p 
+		= "By " + @blog.user.full_name
+	span.admin
+        = link_to "Edit", edit_blog_path(@blog)
+        |  | 
+        = link_to "Back", root_path

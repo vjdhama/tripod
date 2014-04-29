@@ -1,12 +1,9 @@
-.page-header
+.page-header#index
     h1
         | Blogs
     = link_to "Post New Blog", new_blog_path, class: "btn btn-info"
 - @blogs.each do |blog|
     .blog
-        strong
-            = blog.user.first_name 
-        br
         strong
             = blog.title
         .content
@@ -18,3 +15,6 @@
                 = link_to "Edit", edit_blog_path(blog)
                 |  | 
                 = link_to "Delete", blog, method: :delete, data: {confirm: "Are you sure?"}
+        .user
+            a href="#"
+                = blog.user.full_name

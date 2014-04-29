@@ -17,8 +17,14 @@ html
 			  		li 
 			  			= link_to "All Blogs", root_path
   	.container#data
-  		p.notice 
-  			= notice
-       	p.alert
-       		= alert
-  	  	= yield
+      - if !notice.nil?
+        .alert.alert-success.alert-dismissable
+          button.close aria-hidden="true" data-dismiss="alert" type="button"  &times;
+          strong Success! 
+          = notice
+      - if !notice.nil?
+        .alert.alert-warning.alert-dismissable
+          button.close aria-hidden="true" data-dismiss="alert" type="button"  &times;
+          strong Warning! 
+      	  = alert
+  	  = yield

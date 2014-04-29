@@ -23,3 +23,7 @@ body{
 .navbar a {
 	color: #428BCA;
 }
+
+#data{
+	padding-top: 40px
+}
