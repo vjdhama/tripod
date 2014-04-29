@@ -2,9 +2,9 @@
     .col-sm-6.well
         .form-group
             label.control-label.col-sm-2 for= 'name'
-                |User Id
+                |User
             .col-sm-8
-                = f.select :user_id, User.all.collect {|p| [ p.full_name, p.id ] }, class: "form-control"
+                = f.select :user_id, User.all.collect {|p| [ p.full_name, p.id ] }
         .form-group
             label.control-label.col-sm-2 for= 'title'
                 |Title
