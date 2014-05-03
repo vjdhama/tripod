@@ -16,6 +16,10 @@ body{
 	font-family: 'Roboto', 'sans-serif';
 }
 
+.navbar-header{
+	width: 100%;
+}
+
 .navbar{
 	font-family: 'Raleway','sans-serif';
 }

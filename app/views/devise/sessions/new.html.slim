@@ -1,0 +1,15 @@
+h2 Sign in
+.col-sm-6
+    = form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "form-horizontal well", role: "form"}) do |f|
+        .form-group
+            label.control-label.col-sm-4
+                |Email
+            .col-sm-8
+                = f.email_field :email, autofocus: true, class: "form-control"
+        .form-group
+            label.control-label.col-sm-4
+                |Password
+            .col-sm-8
+                = f.password_field :password, autocomplete: "off", class: "form-control"
+        button.btn.btn-success.btn-md.icon-ok type = "submit"  Submit
+    
