@@ -5,4 +5,4 @@ Simple blogging app
 
 Here's how it looks like now : 
 
-![alt tag](http://imgur.com/ZQSCaVT)
+![alt tag](http://i.imgur.com/ZQSCaVT.png)
