@@ -3,3 +3,9 @@ test:
     email : "test@test.com"
     first_name : "test"
     last_name : "test"
+
+rest:
+    profile_name : 'rest'
+    email : "rest@rest.com"
+    first_name : "rest"
+    last_name : "rest" 

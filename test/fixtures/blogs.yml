@@ -1,11 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  content: MyText
+  title: MyStringa
+  content: MyTexta
   user: test
 
 two:
-  title: MyString
-  content: MyText
+  title: MyStringb
+  content: MyTextb
   user: test
+
+three:
+  title: MyStringc
+  content: MyTextc
+  user: rest

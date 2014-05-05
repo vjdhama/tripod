@@ -1,2 +1,17 @@
-h1 Profiles#show
-p Find me in app/views/profiles/show.html.slim
+.page-header
+	h1
+		= @user.full_name
+
+
+- if @blogs
+	- @blogs.each do |blog|
+		.container-fluid.well
+			= blog.title
+			hr
+			= blog.content
+			.meta
+            	= link_to time_ago_in_words(blog.created_at) + " ago", blog
+
+
+
+
