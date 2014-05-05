@@ -4,17 +4,21 @@
     = link_to "Post New Blog", new_blog_path, class: "btn btn-info"
 - @blogs.each do |blog|
     .blog
-        strong
-            = blog.title
-        .content
-            = blog.content
-        .meta
-            = link_to time_ago_in_words(blog.created_at) + " ago", blog
-            |  
-            span.admin
-                = link_to "Edit", edit_blog_path(blog)
-                |  | 
-                = link_to "Delete", blog, method: :delete, data: {confirm: "Are you sure?"}
-        .user
-            a href="#"
-                = blog.user.full_name
+        .row
+            .col-md-1
+                = image_tag blog.user.gravatar_url
+            .col-md-10
+                strong
+                    = blog.title
+                .content
+                    = blog.content
+                .meta
+                    = link_to time_ago_in_words(blog.created_at) + " ago", blog
+                    |  
+                    span.admin
+                        = link_to "Edit", edit_blog_path(blog)
+                        |  | 
+                        = link_to "Delete", blog, method: :delete, data: {confirm: "Are you sure?"}
+                .user
+                    a href="#"
+                        = blog.user.full_name

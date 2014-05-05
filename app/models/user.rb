@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
+    # Include default devise modules. Others available are:
+    # :confirmable, :lockable, :timeoutable and :omniauthable
   	devise 	:database_authenticatable, :registerable,
          	:recoverable, :rememberable, :trackable, :validatable
 
@@ -20,4 +20,10 @@ class User < ActiveRecord::Base
     def full_name
     	first_name + " " + last_name
     end 
+
+    def gravatar_url
+        final_email = email.strip.downcase
+        hash = Digest::MD5.hexdigest(final_email)
+        "http://gravatar.com/avatar/#{hash}"
+    end
 end
