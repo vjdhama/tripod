@@ -11,10 +11,10 @@ Here's how it looks like now :
 
 `vX.Y.Z`
 
-Where X is major release, Y is minor realease, Z is the build.
+>Where X is major release, Y is minor realease, Z is the build.
 
-Upcoming Featues
-----------------
+Upcoming Features
+-----------------
 **v0.2.0**
 
 - Add support for admin access.
