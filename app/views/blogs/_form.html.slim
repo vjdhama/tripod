@@ -1,5 +1,5 @@
 = form_for (@blog), html: {class: "form-horizontal", role: "form"} do |f|
-    .col-sm-6.well
+    .col-sm-12.well
         .form-group
             label.control-label.col-sm-2 for= 'name'
                 |User
@@ -9,12 +9,12 @@
             label.control-label.col-sm-2 for= 'title'
                 |Title
             .col-sm-8
-                = f.text_field :title, class: "form-control"
+                = f.text_field :title, class: "form-control", placeholder: "Rest API"
             label#form-offer-on-error.label.label-danger
         .form-group
             label.control-label.col-sm-2 for= 'content'
                 |Content
             .col-sm-8
-                = f.text_area :content, class: "form-control"
+                = f.text_area :content, class: "form-control", rows: "18", placeholder: "Rest API's design principles"
             label#form-offer-on-error.label.label-danger
         button.btn.btn-success.btn-md.icon-ok type = "submit"  Submit
